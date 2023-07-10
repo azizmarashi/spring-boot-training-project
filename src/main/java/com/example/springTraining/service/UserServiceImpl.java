@@ -2,10 +2,12 @@ package com.example.springTraining.service;
 
 import com.example.springTraining.dao.UserDao;
 import com.example.springTraining.domain.UserDomain;
-import com.example.springTraining.mapper.MapperTest;
+import com.example.springTraining.mapper.UserMapper;
 import com.example.springTraining.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService{
@@ -14,7 +16,7 @@ public class UserServiceImpl implements UserService{
     private UserDao userDao;
 
     @Autowired
-    private MapperTest mapper;
+    private UserMapper userMapper;
 
     @Override
     public UserModel registerNewUser(UserModel userModel) {
@@ -32,9 +34,15 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public UserModel registerNewUserWithMapper(UserModel userModel) {
-        UserDomain user = mapper.userModelToUserDomain(userModel);
+        UserDomain user = userMapper.userModelToUserDomain(userModel);
         userDao.save(user);
         return userModel;
+    }
+
+    @Override
+    public List<UserModel> findAllUsers() {
+        List<UserDomain> allUsers =  userDao.findAll();
+        return userMapper.userDomainsToUserModelList(allUsers);
     }
 
 
