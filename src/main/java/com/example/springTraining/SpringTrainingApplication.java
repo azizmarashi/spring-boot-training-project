@@ -22,7 +22,7 @@ public class SpringTrainingApplication {
 		return args -> {
 
 			List<UserDomain> allUsers =  userDao.findAll();
-			System.out.println("There is: "+allUsers.size()+ " Users on database.");
+			System.out.println("There is: "+allUsers.size()+ " Users on database.\n");
 
 			testScheduled.testScheduling();
 

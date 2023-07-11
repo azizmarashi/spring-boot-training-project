@@ -10,8 +10,8 @@ public class TestScheduled {
 
 
     @Scheduled(fixedRate = 2000)
-    public void printHi(){
-        System.out.println("hi");
+    public void testScheduling(){
+        System.out.println("Test Scheduling");
     }
 
 }
