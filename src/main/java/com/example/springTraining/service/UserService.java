@@ -1,8 +1,6 @@
 package com.example.springTraining.service;
 
-import com.example.springTraining.domain.UserDomain;
 import com.example.springTraining.model.UserModel;
-
 import java.util.List;
 
 public interface UserService {

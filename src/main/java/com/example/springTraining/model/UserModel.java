@@ -18,7 +18,7 @@ public class UserModel {
     private String fullName;
     private String username;
 
-    @JsonIgnore
+//    @JsonIgnore
     private String password;
     @Min(18)
     private long age;

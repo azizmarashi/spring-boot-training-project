@@ -1,6 +1,6 @@
 package com.example.springTraining;
 
-import com.example.springTraining.configs.TestScheduled;
+import com.example.springTraining.configs.UseScheduled;
 import com.example.springTraining.dao.UserDao;
 import com.example.springTraining.domain.UserDomain;
 import org.springframework.boot.CommandLineRunner;
@@ -16,15 +16,14 @@ public class SpringTrainingApplication {
 		SpringApplication.run(SpringTrainingApplication.class, args);
 	}
 
-
 	@Bean
-	CommandLineRunner run(UserDao userDao, TestScheduled testScheduled){
+	CommandLineRunner run(UserDao userDao, UseScheduled useScheduled){
 		return args -> {
 
 			List<UserDomain> allUsers =  userDao.findAll();
 			System.out.println("There is: "+allUsers.size()+ " Users on database.\n");
 
-			testScheduled.testScheduling();
+			useScheduled.testScheduling();
 
 		};
 

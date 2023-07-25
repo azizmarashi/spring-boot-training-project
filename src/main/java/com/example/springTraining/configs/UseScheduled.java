@@ -6,8 +6,7 @@ import org.springframework.stereotype.Component;
 
 @EnableScheduling
 @Component
-public class TestScheduled {
-
+public class UseScheduled {
 
     @Scheduled(fixedRate = 2000)
     public void testScheduling(){

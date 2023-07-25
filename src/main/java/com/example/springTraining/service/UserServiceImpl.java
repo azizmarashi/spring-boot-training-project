@@ -6,7 +6,6 @@ import com.example.springTraining.mapper.UserMapper;
 import com.example.springTraining.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -44,6 +43,5 @@ public class UserServiceImpl implements UserService{
         List<UserDomain> allUsers =  userDao.findAll();
         return userMapper.userDomainsToUserModelList(allUsers);
     }
-
 
 }
