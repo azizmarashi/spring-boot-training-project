@@ -25,9 +25,19 @@ public class UserController {
         return ResponseEntity.ok(userService.registerNewUserWithMapper(userModel));
     }
 
-    @GetMapping("/find-all-users")
-    public ResponseEntity<List<UserModel>> findAllUsers(){
-        return ResponseEntity.ok(userService.findAllUsers());
+    @PostMapping("/register-new-user-bean-utils")
+    public ResponseEntity<UserModel> registerNewUserWithBeanUtils(@RequestBody @Valid UserModel userModel){
+        return ResponseEntity.ok(userService.registerNewUserWithBeanUtils(userModel));
+    }
+
+    @GetMapping("/find-all-users-with-bean-utils")
+    public ResponseEntity<List<UserModel>> findAllUsersWithBeanUtils(){
+        return ResponseEntity.ok(userService.findAllUsersWithBeanUtils());
+    }
+
+    @GetMapping("/find-all-users-with-mapper")
+    public ResponseEntity<List<UserModel>> findAllUsersWithMapper(){
+        return ResponseEntity.ok(userService.findAllUsersWithMapper());
     }
 
 }

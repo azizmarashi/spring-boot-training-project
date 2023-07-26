@@ -8,5 +8,9 @@ public interface UserService {
 
     UserModel registerNewUserWithMapper(UserModel userModel);
 
-    List<UserModel> findAllUsers();
+    UserModel registerNewUserWithBeanUtils(UserModel userModel);
+
+    List<UserModel> findAllUsersWithBeanUtils();
+
+    List<UserModel> findAllUsersWithMapper();
 }
