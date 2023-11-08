@@ -1,0 +1,116 @@
+# use sql_store
+############################
+# select
+#        last_name,
+#        first_name,
+#        points * 10 +100 as 'discount factor'
+# from customers
+############################
+# select distinct state
+# from customers
+############################
+# select name, unit_price, unit_price *1.1 as new_price
+# from products
+############################
+# select *
+# from customers
+# where points > 3000
+############################
+# select *
+# from customers
+# where state = 'va'
+############################
+# select *
+# from customers
+# where birth_date > '1990-01-01'
+############################
+# select *
+# from customers
+# where birth_date > '1990-01-01'
+#    OR points > 1000 and state = 'va'
+############################
+# select *
+# from customers
+# where (birth_date > '1990-01-01' OR points > 1000 and state = 'va')
+############################
+# select *
+# from customers
+# where not (birth_date > '1990-01-01' OR points > 1000 and state = 'va')
+############################
+# select *
+# from order_items
+# where order_id = 6
+#   and unit_price * quantity > 30
+############################
+# select *
+# from customers
+# where state ='va' or state= 'ga' or state=  'fl'
+############################
+# select *
+# from customers
+# where state in ('va', 'ga', 'fl')
+############################
+# select *
+# from customers
+# where state not in ('va', 'ga', 'fl')
+############################
+# select *
+# from customers
+# where points >= 1000 and customers.points <= 3000
+############################
+# select *
+# from customers
+# where points between 1000 and 3000
+############################
+# select *
+# from customers
+# where birth_date between '1990-01-01' and '2000-01-01'
+############################
+# select *
+# from customers
+# where last_name like 'b%'
+############################
+# select *
+# from customers
+# where last_name like '%b%'
+############################
+# select *
+# from customers
+# where last_name regexp 'field'
+############################
+# select *
+# from customers
+# where phone is null
+############################
+# select *
+# from customers
+# order by first_name desc
+############################
+# select *
+# from customers
+# order by state, first_name
+############################
+# select first_name,last_name
+# from customers
+# order by birth_date
+############################
+# select first_name,last_name, 10 as test
+# from customers
+# order by birth_date
+############################
+# select *, (quantity*unit_price) as total_price
+# from order_items
+# order by quantity * unit_price
+############################
+# select *
+# from customers
+# limit 3
+############################
+# select *
+# from customers
+# limit 6,3
+############################
+# select *
+# from customers
+# order by points desc limit 3
+############################
